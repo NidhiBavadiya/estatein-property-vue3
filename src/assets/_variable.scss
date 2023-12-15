@@ -1,0 +1,127 @@
+:root{
+    --shimmer-color: #ddd;
+  }
+  
+  $primary: #3A70B4;
+  $secondary: #EE7D67;
+  
+  $mediaSizes: (
+    'xs': 320px,
+    'sm': 576px,
+    'md': 768px,
+    'lg': 992px,
+    'xl': 1200px,
+    'xxl': 1400px
+  );
+  $mediaSizes2: (
+    'xs': 320px,
+    'xsm': 380px,
+    'sm': 575.98px,
+    'md': 767.98px,
+    'lg': 991.98px,
+    'xl': 1199.98px,
+    'xxl': 1400px
+  );
+  
+  $fw300:300;
+  $fw400:400;
+  $fw500:500;
+  $fw600:600;
+  $fw700:700;
+  $fw800:800;
+  
+  // responsive class
+  // Small tablets and large smartphones (landscape view)
+  
+  $screen-sm-max: 575px;
+  // Small tablets 
+  $screen-md-max: 767px;
+  // Tablets and small desktops
+  $screen-lg-max: 991px;
+  // Semi Large tablets and desktops
+  $screen-xll-max: 1024px;
+  // Semi Large tablets and desktops
+  $screen-xl-max: 1199px;
+  // Large tablets and desktops
+  $screen-xxl-max: 1399px;
+  // Extra Large tablets and desktops
+  $screen-xxxl-max: 1499px;
+  // Extra Large tablets and desktops
+  $screen-xxll-max: 1699px;
+  
+  // Small devices
+  @mixin sm {
+    @media (max-width: #{$screen-sm-max}) {
+      @content;
+    }
+  }
+  
+  // Medium devices
+  @mixin md {
+    @media (max-width: #{$screen-md-max}) {
+      @content;
+    }
+  }
+  
+  // Semi Large devices
+  @mixin lg {
+    @media (max-width: #{$screen-lg-max}) {
+      @content;
+    }
+  }
+  
+  // large devices
+  @mixin xl {
+    @media (max-width: #{$screen-xl-max}) {
+      @content;
+    }
+  }
+  
+  // large devices
+  @mixin xll {
+    @media (max-width: #{$screen-xll-max}) {
+      @content;
+    }
+  }
+  
+  // Extra large devices
+  @mixin xxl {
+    @media (max-width: #{$screen-xxl-max}) {
+      @content;
+    }
+  }
+  
+  // Double Extra large devices
+  @mixin xxxl {
+    @media (max-width: #{$screen-xxxl-max}) {
+      @content;
+    }
+  }
+  
+  // Double Extra large devices
+  @mixin xxll {
+    @media (max-width: #{$screen-xxll-max}) {
+      @content;
+    }
+  }
+  
+  //transition
+  @mixin trans3 {
+    transition: 0.3s ease-in-out;
+  }
+  
+  //flex-center
+  @mixin all_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  //flex start
+  @mixin start {
+    display: flex;
+    align-items: left;
+    justify-content: start;
+  }
+  // TODO : Need to make CDN path dynamic
+  //Make sure to change this path when we deploy
+  $VUE_APP_CDN_PATH: 'https://cdn.staging.leadip.io/';
