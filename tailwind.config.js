@@ -14,6 +14,9 @@ module.exports = {
       },
       textColor: {
         "lightgray": "#999",
+      },
+      borderColor:{
+        "darkgray":'#262626'
       }
     },
   },

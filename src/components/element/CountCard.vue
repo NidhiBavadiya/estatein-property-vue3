@@ -9,7 +9,7 @@ const props = defineProps({
 
 <template>
   <div>
-    <div class=" w-[239px] bg-primary border border-[#262626] py-4 px-6 rounded-xl min-w-[239px]">
+    <div class=" w-[239px] bg-primary border border-darkgray py-4 px-6 rounded-xl min-w-[239px]">
         <p class="text-4xl font-bold"> {{ count }}</p>
         <p class="text-lg font-medium text-lightgray">{{title}}</p>
     </div>

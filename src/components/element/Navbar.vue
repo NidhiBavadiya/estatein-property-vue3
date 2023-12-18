@@ -3,13 +3,13 @@
 </script>
 
 <template>
-  <div class="bg-primary border border-[#262626]">
+  <div class="bg-primary border border-darkgray">
      <div class="mx-36">
       <nav class=" w-full">
         <div class="flex  items-center justify-between mx-auto py-4">
           <img src="../../assets/images/compny_main_logo.svg" alt="logo" />
           <div class="md:flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse hidden" >
-            <button class="border border-[#262626]  md:bg-black  md:px-5 md:py-2 rounded">Contact</button>
+            <button class="border border-darkgray  md:bg-black  md:px-5 md:py-2 rounded">Contact</button>
             <!-- nav-button show in responsive -->
           </div>
           <div class="relative">
@@ -46,28 +46,28 @@
               <li>
                 <a
                   href="#"
-                  class="block py-2 px-3 rounded  border border-transparent hover:border-[#262626]  md:hover:bg-black  md:px-5 md:py-2  dark:text-white  dark:hover:text-white"
+                  class="block py-2 px-3 rounded  border border-transparent hover:border-darkgray  md:hover:bg-black  md:px-5 md:py-2  dark:text-white  dark:hover:text-white"
                   >Home</a
                 >
               </li>
               <li>
                 <a
                   href="#"
-                  class="block py-2 px-3 rounded border border-transparent hover:border-[#262626]  md:hover:bg-black  md:px-5 md:py-2  dark:text-white  dark:hover:text-white"
+                  class="block py-2 px-3 rounded border border-transparent hover:border-darkgray  md:hover:bg-black  md:px-5 md:py-2  dark:text-white  dark:hover:text-white"
                   >About Us</a
                 >
               </li>
               <li>
                 <a
                   href="#"
-                  class="block py-2 px-3 rounded  border border-transparent hover:border-[#262626]  md:hover:bg-black  md:px-5 md:py-2  dark:text-white  dark:hover:text-white"
+                  class="block py-2 px-3 rounded  border border-transparent hover:border-darkgray  md:hover:bg-black  md:px-5 md:py-2  dark:text-white  dark:hover:text-white"
                   >Properties</a
                 >
               </li>
               <li>
                 <a
                   href="#"
-                  class="block py-2 px-3 rounded border border-transparent hover:border-[#262626]  md:hover:bg-black  md:px-5 md:py-2 dark:text-white  dark:hover:text-white"
+                  class="block py-2 px-3 rounded border border-transparent hover:border-darkgray  md:hover:bg-black  md:px-5 md:py-2 dark:text-white  dark:hover:text-white"
                   >Services</a
                 >
               </li>
