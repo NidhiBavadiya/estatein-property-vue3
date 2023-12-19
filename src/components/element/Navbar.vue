@@ -44,32 +44,24 @@
               class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100  rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  "
             >
               <li>
-                <a
-                  href="#"
+                <router-link to="/"
                   class="block py-2 px-3 rounded  border border-transparent hover:border-darkgray  md:hover:bg-black  md:px-5 md:py-2  dark:text-white  dark:hover:text-white"
-                  >Home</a
-                >
+                  >Home</router-link >
               </li>
               <li>
-                <a
-                  href="#"
+                <router-link to="/about"
                   class="block py-2 px-3 rounded border border-transparent hover:border-darkgray  md:hover:bg-black  md:px-5 md:py-2  dark:text-white  dark:hover:text-white"
-                  >About Us</a
-                >
+                  >About Us</router-link>
               </li>
               <li>
-                <a
-                  href="#"
+                <router-link to="/properties"
                   class="block py-2 px-3 rounded  border border-transparent hover:border-darkgray  md:hover:bg-black  md:px-5 md:py-2  dark:text-white  dark:hover:text-white"
-                  >Properties</a
-                >
+                  >Properties</router-link>
               </li>
               <li>
-                <a
-                  href="#"
+                <router-link to="/services"
                   class="block py-2 px-3 rounded border border-transparent hover:border-darkgray  md:hover:bg-black  md:px-5 md:py-2 dark:text-white  dark:hover:text-white"
-                  >Services</a
-                >
+                  >Services</router-link>
               </li>
             </ul>
           </div>

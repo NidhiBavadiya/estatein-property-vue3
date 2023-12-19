@@ -9,6 +9,6 @@ const props = defineProps({
 
 <template>
   <div>
-    <button class="bg-purple text-white px-5 py-3 rounded-xl">{{ name }}</button>
+    <button class="bg-purple text-white px-5 py-3 rounded-xl whitespace-nowrap">{{ name }}</button>
   </div>
 </template>

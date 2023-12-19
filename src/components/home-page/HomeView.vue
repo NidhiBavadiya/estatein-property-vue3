@@ -5,6 +5,8 @@ import CompanyInfoCard from "../element/CompanyInfoCard.vue";
 import PropertiesDetail from "./home-elements/PropertiesDetail.vue";
 import ClientReview from "./home-elements/ClientReview.vue";
 import ClientQuestions from "./home-elements/ClientQuestions.vue";
+import ExploreProperty from "./home-elements/ExploreProperty.vue";
+import Footer from "../element/Footer.vue";
 
 const companyInfoCards = [
   { title: "Find Your Dream Home", imgUrl: "/assets/images/shop_icon.svg" },
@@ -49,8 +51,17 @@ const companyInfoCards = [
     <div class="container mx-auto mt-36">
       <ClientReview />
     </div>
-    <!-- <div>
+    <!-- client Question -->
+    <div class="container mx-auto mt-36">
       <ClientQuestions />
-    </div> -->
+    </div>
+    <!-- explore property -->
+    <div>
+      <ExploreProperty />
+    </div>
+    <!-- footer -->
+    <div>
+      <Footer />
+    </div>
   </div>
 </template>

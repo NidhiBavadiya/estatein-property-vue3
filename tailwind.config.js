@@ -8,6 +8,7 @@ module.exports = {
       backgroundColor:{
         "primary":"#1A1A1A",
         "purple":"#703BF7",
+        "secondary":"#262626",
       },
       backgroundImage: {
         'header-img': "url('../assets/Images/header_line.svg')",

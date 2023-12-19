@@ -3,9 +3,9 @@ import BlackButton from '../../element/BlackButton.vue';
 import PropertiesCard from '../../element/PropertiesCard.vue';
 
 const propertyDeatils=[
-    {imgUrl:'/assets/images/property_icon1.svg',cardTitle:'Seaside Serenity Villa',cardDetail:'A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood...',dataCount1:'4',dataCount2:'3',price:'15,50,000'},
-    {imgUrl:'/assets/images/property_icon2.svg',cardTitle:'Metropolitan Haven',cardDetail:'A chic and fully-furnished 2-bedroom apartment with panoramic city views...',dataCount1:'2',dataCount2:'2',price:'15,50,000'},
-    {imgUrl:'/assets/images/property_icon3.svg',cardTitle:'Rustic Retreat Cottage',cardDetail:'A chic and fully-furnished 2-bedroom apartment with panoramic city views...',dataCount1:'3',dataCount2:'3',price:'15,50,000'},
+    {imgUrl:'/assets/images/property_icon1.svg',cardTitle:'Seaside Serenity Villa',cardDetail:'A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood...',dataCount1:'4-Bedroom',dataCount2:'3-Bathroom',price:'15,50,000'},
+    {imgUrl:'/assets/images/property_icon2.svg',cardTitle:'Metropolitan Haven',cardDetail:'A chic and fully-furnished 2-bedroom apartment with panoramic city views...',dataCount1:'2-Bedroom',dataCount2:'2-Bathroom',price:'15,50,000'},
+    {imgUrl:'/assets/images/property_icon3.svg',cardTitle:'Rustic Retreat Cottage',cardDetail:'A chic and fully-furnished 2-bedroom apartment with panoramic city views...',dataCount1:'3-Bedroom',dataCount2:'3-Bathroom',price:'15,50,000'},
     ]
 </script>
 <template>
