@@ -5,7 +5,7 @@ import CompanyInfoCard from "../element/CompanyInfoCard.vue";
 import PropertiesDetail from "./home-elements/PropertiesDetail.vue";
 import ClientReview from "./home-elements/ClientReview.vue";
 import ClientQuestions from "./home-elements/ClientQuestions.vue";
-import ExploreProperty from "./home-elements/ExploreProperty.vue";
+import ExploreProperty from "../element/ExploreProperty.vue";
 import Footer from "../element/Footer.vue";
 
 const companyInfoCards = [
@@ -56,7 +56,7 @@ const companyInfoCards = [
       <ClientQuestions />
     </div>
     <!-- explore property -->
-    <div>
+    <div class="mt-36">
       <ExploreProperty />
     </div>
     <!-- footer -->

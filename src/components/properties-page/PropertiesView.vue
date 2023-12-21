@@ -3,7 +3,7 @@ import Navbar from "../element/Navbar.vue";
 import Footer from "../element/Footer.vue";
 import PropertiesPossibilities from "./Property-element/PropertiesPossibilities.vue";
 import ClientDetailForm from "./Property-element/ClientDetailForm.vue";
-
+import ExploreProperty from "../element/ExploreProperty.vue";
 </script>
 <template>
   <div>
@@ -13,11 +13,14 @@ import ClientDetailForm from "./Property-element/ClientDetailForm.vue";
     </div>
     <!-- Properties card -->
     <div>
-        <PropertiesPossibilities />
+      <PropertiesPossibilities />
     </div>
     <!-- client detail form -->
     <div class="container mx-auto mt-20">
-        <ClientDetailForm />
+      <ClientDetailForm />
+    </div>
+    <div>
+      <ExploreProperty />
     </div>
     <!-- footer -->
     <div>

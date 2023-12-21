@@ -2,59 +2,40 @@
 import PropertiesCard from "../../element/PropertiesCard.vue";
 import { ref } from "vue";
 import PurpleButton from "../../element/PurpleButton.vue";
+import { useCounterStore } from "../../../stores/counter";
 import { watch, computed } from "vue";
+import { useRouter } from "vue-router";
 const searchData = ref<any>("");
-const discoverPropertys = ref([
-  {
-    imgUrl: "/assets/images/property_icon1.svg",
-    cardTitle: "Seaside Serenity Villa",
-    cardDetail:
-      "Wake up to the soothing melody of waves. This beachfront villa offers...",
-    price: "30,50,000",
-    location: "Ahmadabad",
-    buildYear: "2022",
-    dataCount1:'4-Bedroom',
-    dataCount2:'3-Bathroom'
-  },
-  {
-    imgUrl: "/assets/images/property_icon2.svg",
-    cardTitle: "Metropolitan Haven",
-    cardDetail:
-      "Immerse yourself in the energy of the city. This modern apartment in the heart...",
-    price: "25,50,000",
-    location: "surat",
-    buildYear: "2020",
-    dataCount1:'4-Bedroom',
-    dataCount2:'3-Bathroom'
-  },
-  {
-    imgUrl: "/assets/images/property_icon3.svg",
-    cardTitle: "Rustic Retreat Cottage",
-    cardDetail:
-      "Find tranquility in the countryside. This charming cottage is nestled amidst rolling hills...",
-    price: "35,50,000",
-    location: "gandhinager",
-    buildYear: "2023",
-    dataCount1:'4-Bedroom',
-    dataCount2:'3-Bathroom'
-  }
+const router = useRouter();
+const storeArray = useCounterStore();
+console.log("object", storeArray.discoverPropertys);
+
+const locationVals = ref([
+  { city: "Ahmadabad", value: "Ahmadabad" },
+  { city: "surat", value: "surat" },
+  { city: "gandhinager", value: "gandhinager" }
 ]);
-const locationVals = ref([{city:"Ahmadabad", value:'Ahmadabad'}, {city:"surat", value:'surat'},{city:"gandhinager", value:'gandhinager'}]);
 const pricingRanges = ref(["30,50,000", "25,50,000", "35,50,000"]);
 const buildYears = ref(["2023", "2020", "2022", "2019"]);
 
-const location = ref('')
-const priceRange = ref('')
-const buildYear = ref('')
-
+const location = ref("");
+const priceRange = ref("");
+const buildYear = ref("");
 
 const locationChange = computed(() => {
-  const result = discoverPropertys.value.filter(item =>
-     item.location.includes(location.value) && item.cardTitle.includes(searchData.value) && item.buildYear.includes(buildYear.value) && item.price.includes(priceRange.value)
+  const result = storeArray.discoverPropertys.filter(
+    item =>
+      item.location.includes(location.value) &&
+      item.cardTitle.includes(searchData.value) &&
+      item.buildYear.includes(buildYear.value) &&
+      item.price.includes(priceRange.value)
   );
   return result;
-})
+});
 
+function viewDetail(id: any, data: any) {
+  router.push({ path: "/properties/properties-details", query: { id: id } });
+}
 </script>
 <template>
   <div>
@@ -76,14 +57,16 @@ const locationChange = computed(() => {
     <!-- filter -->
     <div class="container mx-auto">
       <div class="mb-40 flex justify-evenly">
-
-
         <select
           id="location_value"
           class="w-[250px] py-3 px-5 bg-black rounded-lg border border-darkgray"
           v-model="location"
         >
-          <option :value="locationVal.value" v-for="locationVal in locationVals" :key="locationVal">{{ locationVal.city }}</option>
+          <option
+            :value="locationVal.value"
+            v-for="locationVal in locationVals"
+            :key="locationVal"
+          >{{ locationVal.city }}</option>
         </select>
 
         <select
@@ -91,7 +74,11 @@ const locationChange = computed(() => {
           class="w-[250px] py-3 px-5 bg-black rounded-lg border border-darkgray"
           v-model="priceRange"
         >
-          <option :value="pricingRange" v-for="pricingRange in pricingRanges" :key="pricingRange">{{ pricingRange }}</option>
+          <option
+            :value="pricingRange"
+            v-for="pricingRange in pricingRanges"
+            :key="pricingRange"
+          >{{ pricingRange }}</option>
         </select>
 
         <select
@@ -99,7 +86,11 @@ const locationChange = computed(() => {
           class="w-[250px] py-3 px-5 bg-black rounded-lg border border-darkgray"
           v-model="buildYear"
         >
-          <option :value="buildYear" v-for="buildYear in buildYears" :key="buildYear">{{ buildYear }}</option>
+          <option
+            :value="buildYear"
+            v-for="buildYear in buildYears"
+            :key="buildYear"
+          >{{ buildYear }}</option>
         </select>
       </div>
     </div>
@@ -114,7 +105,7 @@ const locationChange = computed(() => {
       </div>
       <div class="flex">
         <div v-for="discoverProperty in locationChange" :key="discoverProperty.cardTitle">
-          <PropertiesCard :propertyInfo="discoverProperty" />
+          <PropertiesCard :propertyInfo="discoverProperty" @viewDetail="viewDetail" />
         </div>
       </div>
     </div>
